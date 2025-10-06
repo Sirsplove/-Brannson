@@ -2,7 +2,7 @@
 
 A sophisticated, single-page website for Brånnson Studio's luxury logistics and white-glove storage services. Designed specifically for interior designers and architects in the Big Sky and greater Bozeman area.
 
-## 🎨 Design Features
+## Design Features
 
 - **Luxury Aesthetic**: Clean, minimalist design with sophisticated typography
 - **Sticky Navigation**: Elegant navigation bar that follows scroll
@@ -11,7 +11,7 @@ A sophisticated, single-page website for Brånnson Studio's luxury logistics and
 - **Professional Color Palette**: Neutral tones with warm brown accents
 - **High-Quality Typography**: Playfair Display (serif) for headings, Inter (sans-serif) for body text
 
-## 📁 File Structure
+## File Structure
 
 ```
 brannson-studio/
@@ -23,14 +23,14 @@ brannson-studio/
 └── README.md              # This file
 ```
 
-## 🚀 Quick Start
+## Quick Start
 
 1. **Upload Files**: Upload all files to your web server or hosting provider
 2. **Configure Form**: Choose and configure your preferred form integration method
 3. **Customize Content**: Update any text, contact information, or styling as needed
 4. **Test**: Test the website on different devices and browsers
 
-## 📝 Form Integration Options
+## Form Integration Options
 
 The website includes multiple form integration options. Choose the one that best fits your needs:
 
@@ -57,7 +57,7 @@ The website includes multiple form integration options. Choose the one that best
 2. Add a hidden input with `name="form-name"` and `value="contact"`
 3. Netlify will automatically handle form submissions
 
-## 🎨 Logo Variations
+## Logo Variations
 
 The website includes several logo variations:
 
@@ -68,14 +68,14 @@ The website includes several logo variations:
 
 View `logo-variations.html` to see all options and recommendations.
 
-## 📱 Responsive Design
+## Responsive Design
 
 The website is fully responsive and optimized for:
 - Desktop computers (1200px+)
 - Tablets (768px - 1199px)
 - Mobile phones (320px - 767px)
 
-## 🔧 Customization
+## Customization
 
 ### Colors
 The main color scheme can be customized by updating CSS variables:
@@ -96,7 +96,7 @@ Update the following sections in `index.html`:
 - Services/projects information
 - Contact information and form fields
 
-## 🌐 Browser Support
+## Browser Support
 
 - Chrome (latest)
 - Firefox (latest)
@@ -104,7 +104,7 @@ Update the following sections in `index.html`:
 - Edge (latest)
 - Mobile browsers (iOS Safari, Chrome Mobile)
 
-## 📊 Performance Features
+## Performance Features
 
 - Optimized images and assets
 - Debounced scroll events for better performance
@@ -112,14 +112,14 @@ Update the following sections in `index.html`:
 - Minimal JavaScript for fast loading
 - CSS animations instead of JavaScript where possible
 
-## 🔒 Security Considerations
+## Security Considerations
 
 - Form validation on both client and server side
 - Sanitized form inputs
 - HTTPS recommended for production
 - API keys should be kept secure (use environment variables)
 
-## 📞 Support
+## Support
 
 For questions about implementation or customization:
 1. Check the form integration documentation in `form-integration.js`
@@ -127,7 +127,7 @@ For questions about implementation or customization:
 3. Test responsive design on different devices
 4. Validate HTML and CSS for any issues
 
-## 🎯 Target Audience
+## Target Audience
 
 This website is specifically designed for:
 - Interior designers
@@ -136,7 +136,7 @@ This website is specifically designed for:
 - Luxury home builders
 - Design professionals in Big Sky and Bozeman area
 
-## 📈 SEO Considerations
+## SEO Considerations
 
 - Semantic HTML structure
 - Meta descriptions and titles
@@ -145,7 +145,7 @@ This website is specifically designed for:
 - Mobile-friendly design
 - Clean URL structure
 
-## 🔄 Updates and Maintenance
+## Updates and Maintenance
 
 Regular maintenance tasks:
 - Update contact information as needed
@@ -156,6 +156,5 @@ Regular maintenance tasks:
 
 ---
 
-**Built with ❤️ for Brånnson Studio**
 
 *Luxury logistics and white-glove storage for interior designers and architects.*
