@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Coming Soon - Brånnson Studio</title>
+    <meta name="description" content="Brånnson Studio client portal is coming soon. Contact your account manager for project updates.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .coming-soon-container {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #f8f8f8 0%, #f2f2f2 25%, #e8e8e8 50%, #f2f2f2 75%, #f8f8f8 100%);
+            padding: 2rem;
+        }
+        
+        .coming-soon-content {
+            max-width: 600px;
+            text-align: center;
+            background: white;
+            padding: 4rem 3rem;
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(212, 165, 116, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .coming-soon-content::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #d4a574, #b8946a, #d4a574);
+            background-size: 200% 100%;
+            animation: luxuryGradient 3s ease-in-out infinite;
+        }
+        
+        .coming-soon-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(212, 165, 116, 0.1);
+            border-radius: 50%;
+            animation: luxuryPulse 2s ease-in-out infinite;
+        }
+        
+        .coming-soon-icon svg {
+            width: 40px;
+            height: 40px;
+            stroke: #d4a574;
+        }
+        
+        .coming-soon-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 300;
+            color: #2c2c2c;
+            margin-bottom: 1rem;
+            letter-spacing: -0.01em;
+        }
+        
+        .coming-soon-subtitle {
+            font-size: 1.2rem;
+            color: #d4a574;
+            margin-bottom: 2rem;
+            font-weight: 400;
+            letter-spacing: 0.5px;
+        }
+        
+        .coming-soon-description {
+            font-size: 1rem;
+            color: #666;
+            line-height: 1.7;
+            margin-bottom: 3rem;
+        }
+        
+        .contact-info {
+            background: rgba(212, 165, 116, 0.05);
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            border: 1px solid rgba(212, 165, 116, 0.1);
+        }
+        
+        .contact-info h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            color: #2c2c2c;
+            margin-bottom: 1rem;
+        }
+        
+        .contact-info p {
+            color: #555;
+            margin-bottom: 0.5rem;
+        }
+        
+        .contact-info strong {
+            color: #2c2c2c;
+            font-weight: 500;
+        }
+        
+        .action-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #d4a574 0%, #b8946a 50%, #d4a574 100%);
+            background-size: 200% 200%;
+            color: white;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            animation: luxuryGradient 3s ease-in-out infinite;
+        }
+        
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #b8946a 0%, #d4a574 50%, #b8946a 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(212, 165, 116, 0.3);
+            animation-play-state: paused;
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: #d4a574;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border: 2px solid #d4a574;
+            border-radius: 4px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
+        
+        .btn-secondary:hover {
+            background: #d4a574;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(212, 165, 116, 0.2);
+        }
+        
+        .back-link {
+            position: absolute;
+            top: 2rem;
+            left: 2rem;
+            color: #d4a574;
+            text-decoration: none;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: color 0.3s ease;
+        }
+        
+        .back-link:hover {
+            color: #b8946a;
+        }
+        
+        .back-link svg {
+            width: 16px;
+            height: 16px;
+        }
+        
+        @media (max-width: 768px) {
+            .coming-soon-content {
+                padding: 3rem 2rem;
+                margin: 1rem;
+            }
+            
+            .coming-soon-title {
+                font-size: 2rem;
+            }
+            
+            .action-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn-primary,
+            .btn-secondary {
+                width: 100%;
+                max-width: 300px;
+            }
+            
+            .back-link {
+                position: static;
+                margin-bottom: 2rem;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-link">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19 12H5M12 19L5 12L12 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Return to Brånnson Studio
+    </a>
+    
+    <div class="coming-soon-container">
+        <div class="coming-soon-content">
+            <div class="coming-soon-icon">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                    <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="1.5"/>
+                    <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="1.5"/>
+                </svg>
+            </div>
+            
+            <h1 class="coming-soon-title">Portal Coming Soon</h1>
+            <p class="coming-soon-subtitle">We're building something special for you</p>
+            
+            <p class="coming-soon-description">
+                Our client portal is currently under development and will be launching soon. 
+                This secure platform will allow you to track your projects, view delivery schedules, 
+                and manage your account with ease.
+            </p>
+            
+            <div class="contact-info">
+                <h3>Need Project Updates?</h3>
+                <p><strong>Contact your account manager</strong> for the latest information on your projects.</p>
+                <p>They have access to all current project details and can provide you with real-time updates.</p>
+            </div>
+            
+            <div class="action-buttons">
+                <a href="index.html#contact" class="btn-primary">Contact Us</a>
+                <a href="index.html" class="btn-secondary">Return Home</a>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Add some luxury loading animation
+        document.addEventListener('DOMContentLoaded', () => {
+            const content = document.querySelector('.coming-soon-content');
+            content.style.opacity = '0';
+            content.style.transform = 'translateY(30px)';
+            
+            setTimeout(() => {
+                content.style.transition = 'all 0.8s ease';
+                content.style.opacity = '1';
+                content.style.transform = 'translateY(0)';
+            }, 100);
+        });
+    </script>
+</body>
+</html>

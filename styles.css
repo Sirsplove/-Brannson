@@ -250,6 +250,26 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
 }
 
+.portal-nav-link {
+    background: linear-gradient(135deg, #d4a574 0%, #b8946a 50%, #d4a574 100%);
+    background-size: 200% 200%;
+    color: white !important;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-weight: 500;
+    animation: luxuryGradient 3s ease-in-out infinite;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.portal-nav-link:hover {
+    background: linear-gradient(135deg, #b8946a 0%, #d4a574 50%, #b8946a 100%);
+    animation-play-state: paused;
+}
+
+.portal-nav-link::after {
+    display: none;
+}
+
 /* Hero Section */
 .hero {
     height: 100vh;
@@ -301,6 +321,19 @@ h1, h2, h3, h4, h5, h6 {
     max-width: 800px;
     padding: 0 2rem;
     animation: fadeInUp 1s ease-out;
+}
+
+.hero-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    letter-spacing: 3px;
+    color: #d4a574;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    opacity: 0.95;
+    animation: fadeInUp 0.8s ease-out 0.2s both;
 }
 
 .hero-title {
@@ -502,6 +535,228 @@ h1, h2, h3, h4, h5, h6 {
     padding: 6rem 0;
     background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 50%, #f5f5f5 100%);
     position: relative;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2.5rem;
+    margin-bottom: 4rem;
+    perspective: 1000px;
+}
+
+.service-item {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(212, 165, 116, 0.05);
+    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
+    border: 1px solid rgba(212, 165, 116, 0.1);
+    transform-style: preserve-3d;
+    backdrop-filter: blur(10px);
+}
+
+.service-item:nth-child(1) {
+    animation: slideInUp 0.6s ease-out 0.1s both;
+}
+
+.service-item:nth-child(2) {
+    animation: slideInUp 0.6s ease-out 0.2s both;
+}
+
+.service-item:nth-child(3) {
+    animation: slideInUp 0.6s ease-out 0.3s both;
+}
+
+.service-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #d4a574, #b8946a);
+    transform: scaleX(0);
+    transition: transform 0.4s ease;
+    z-index: 3;
+}
+
+.service-item:hover::before {
+    transform: scaleX(1);
+}
+
+.service-item:hover {
+    transform: translateY(-12px) scale(1.03) rotateX(2deg);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.18), 0 0 0 1px rgba(212, 165, 116, 0.25), 0 0 30px rgba(212, 165, 116, 0.1);
+}
+
+.service-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(212, 165, 116, 0.1);
+    border-radius: 50%;
+    transition: all 0.4s ease;
+}
+
+.service-icon svg {
+    width: 40px;
+    height: 40px;
+    stroke: #d4a574;
+    transition: all 0.3s ease;
+}
+
+.service-content {
+    padding: 2.5rem 2rem;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.service-item:hover .service-content {
+    background: linear-gradient(135deg, rgba(212, 165, 116, 0.02) 0%, rgba(184, 148, 106, 0.02) 100%);
+}
+
+.service-content h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1.2rem;
+    color: #2c2c2c;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    transition: color 0.3s ease;
+}
+
+.service-item:hover .service-content h3 {
+    color: #d4a574;
+}
+
+.service-item:hover .service-icon {
+    background: rgba(212, 165, 116, 0.2);
+    transform: scale(1.1);
+}
+
+.service-item:hover .service-icon svg {
+    stroke: #b8946a;
+    transform: scale(1.1);
+}
+
+.service-content p {
+    color: #666;
+    line-height: 1.7;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+.service-item:hover .service-content p {
+    color: #555;
+}
+
+/* Recent Projects Placeholder */
+.recent-projects-section {
+    margin-top: 4rem;
+    text-align: center;
+}
+
+.projects-subtitle {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: #2c2c2c;
+    margin-bottom: 2rem;
+    font-weight: 300;
+    letter-spacing: -0.01em;
+}
+
+.projects-placeholder {
+    background: white;
+    border-radius: 16px;
+    padding: 3rem 2rem;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(212, 165, 116, 0.1);
+    border: 1px solid rgba(212, 165, 116, 0.15);
+    backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.projects-placeholder::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #d4a574, #b8946a, #d4a574);
+    background-size: 200% 100%;
+    animation: luxuryGradient 3s ease-in-out infinite;
+}
+
+.placeholder-content {
+    position: relative;
+    z-index: 2;
+}
+
+.placeholder-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(212, 165, 116, 0.1);
+    border-radius: 50%;
+    animation: luxuryPulse 2s ease-in-out infinite;
+}
+
+.placeholder-icon svg {
+    width: 40px;
+    height: 40px;
+    stroke: #d4a574;
+}
+
+.placeholder-content h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: #2c2c2c;
+    margin-bottom: 1rem;
+    font-weight: 400;
+}
+
+.placeholder-content p {
+    color: #666;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+}
+
+.placeholder-cta {
+    margin-top: 2rem;
+}
+
+.placeholder-button {
+    display: inline-block;
+    background: linear-gradient(135deg, #d4a574 0%, #b8946a 50%, #d4a574 100%);
+    background-size: 200% 200%;
+    color: white;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    animation: luxuryGradient 3s ease-in-out infinite;
+}
+
+.placeholder-button:hover {
+    background: linear-gradient(135deg, #b8946a 0%, #d4a574 50%, #b8946a 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(212, 165, 116, 0.3);
+    animation-play-state: paused;
 }
 
 .services::before {

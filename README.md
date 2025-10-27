@@ -157,4 +157,4 @@ Regular maintenance tasks:
 ---
 
 
-*Luxury logistics and white-glove storage for interior designers and architects.*
+*Brånnson Studio - Luxury logistics and white-glove storage for interior designers and architects.*
